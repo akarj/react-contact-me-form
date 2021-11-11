@@ -48,6 +48,8 @@ function App() {
       label: "Confirm Password...",
     },
   ];
+
+  //Funtions
   const handleSubmit = e => {
     e.preventDefault();
   };
@@ -55,11 +57,10 @@ function App() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  console.log(formData);
-
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
+        <h1>Register</h1>
         {inputs.map(input => (
           <FormInput
             key={input.id}
