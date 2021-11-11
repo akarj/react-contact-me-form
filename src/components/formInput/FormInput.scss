@@ -1,7 +1,7 @@
 div.formInput {
   display: flex;
   flex-direction: column;
-  width: 18rem;
+  width: 20rem;
   margin-bottom: 0.15rem;
   label {
     color: black;
@@ -21,4 +21,19 @@ div.formInput {
       font-size: 1.05rem;
     }
   }
+  span {
+    font-size: 0.8rem;
+    padding: 3px;
+    padding-top: 0;
+    color: red;
+    display: none;
+    width: 100%;
+  }
+}
+input:invalid[focused="true"] {
+  border-color: red;
+  margin: 10px 0px 0px 0px;
+}
+input:invalid[focused="true"] ~ span {
+  display: block;
 }
